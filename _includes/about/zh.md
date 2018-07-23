@@ -1,31 +1,60 @@
-> 写写代码，做做设计，  
-> 离开世界之前，一切都是过程。
+# Eilmer 可以用来...
 
-Hey，我是黄玄，病毒种，进化程度不明，多出没于[博客](https://huangxuan.me)、[微博](weibo.com/huxpro)、[知乎](https://www.zhihu.com/people/huxpro/pins/posts)、[Twitter](https://twitter.com/Huxpro/)、[Github](http://github.com/huxpro)、[Medium](https://medium.com/@Huxpro) 等地带，绝招尚在开发中。
-
-职业是软件工程师，[Web 工会](https://medium.com/ben-and-dion/team-web-3315aa447fb2#.359a9c6cl)活跃成员。曾被招募为淘宝网 · [阿里旅行](http://alitrip.com)前端工程师、微影时代 · [微票儿](http://www.wepiao.com/?r=movie)前端基础工程团队负责人、[饿了么](https://ele.me/) · 大前端团队 · [PWA 顾问](https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509)。
-
-一些作品和开源软件项目，👉 戳 [Portfolio](/portfolio)、[Github](http://github.com/huxpro)、[演说.io](http://https://zhuanlan.zhihu.com/p/21280918)。 
+Eilmer 是用来对二维或三维瞬态可压缩流动进行数值仿真的代码库。
+您可以通过给定计算域、初始流动状态、边界条件
 
 
-##### Talks
 
-- [Upgrading to Progressive Web Apps][9] · [JSConf CN 上海 2017](http://2017.jsconf.cn/)
-- Building Progressive Web Apps · [CSDI 广州 2017](http://www.csdisummit.com/)
-- The State of Progressive Web App · GDG IO Redux 北京 2017
-- 炒冷饭 · PWA 到底是个什么玩意？· Baidu HQ 北京 2017
-- [Service Worker 101][5] · GDG DevFest 北京 2016
-- [Progressive Web App，复兴序章][4] · [QCon 上海 2016](http://2016.qconshanghai.com/presentation/3111)
-- Progressive Web App 之我见 · GDG IO Redux 北京 2016
-- [CSS Still Sucks 2015][2] · 2015
-- [JavaScript 模块化七日谈][1] · 2015
 
-[1]: //huangxuan.me/2015/07/09/js-module-7day/
-[2]: //huangxuan.me/2015/12/28/css-sucks-2015/
-[3]: //huangxuan.me/2016/06/05/pwa-in-my-pov/
-[4]: //huangxuan.me/2016/10/20/pwa-qcon2016/
-[5]: //huangxuan.me/2016/11/20/sw-101-gdgdf/
-[6]: https://yanshuo.io/assets/player/?deck=58ac8598b123db0067292f92 "PWA Rehashing"
-[7]: https://yanshuo.io/assets/player/?deck=593ad6fbfe88c2006a0a0d6d "The State of PWA"
-[8]: https://yanshuo.io/assets/player/?deck=594d673d570c357d0698a950 "Building PWA"
-[9]: //huangxuan.me/jsconfcn2017/
+# 谁打造了Eilmer？ 为什么呢？
+最主要的开发者是来自于澳大利亚昆士兰大学的 Dr. Peter Jacobs 和 Dr. Rowan Gollan.
+近年来亦有很多开发者做出了出色的贡献。
+完整的贡献者名单请[点击](http://cfcfd.mechmining.uq.edu.au/eilmer/contributors/).
+
+Eilmer 是从辅助涉及激波风洞和扩压管开始做为一个仿真工具来使用的。
+同时Eilmer也用来仿真在激波风洞和扩压管中的实验项目。
+
+最近，Eilmer拓展到了高超声速、涡轮机械及微尺度燃烧器的设计及仿真领域。
+
+# Eilmer的特别之处
+* 二维/三维可压缩流动仿真
+* 包括理想气体、热力学完美气体、相平衡、多温在内的多种热力学模型
+* 有限速率化学反应
+* 无黏流、层流、湍流 (k-omega)流动
+* 二维的Solid domains with conjugate heat transfer in 2D.
+* User-controlled moving grid capability.
+* Shock-fitting method for 2D geometries.
+* Dense-gas thermodynamic models and rotating framse of reference for turbomachine modelling.
+* Transient, time-accurate, using explicit Euler, predictor-corrector and Runge-Kutta updates.
+* Steady-state solver using the Newton-Krylov approach.
+* Parallel computation using shared memory.
+* Multiple block, structure and unstructured grids.
+* Native grid generation and import capability.
+* Unstructured-mesh partitioning via Metis.
+
+
+# 如何做贡献？
+
+
+# 如何引用Eilmer？
+
+我们希望通过使用Eilmer，您可以通过创造一些高品质的仿真工作，来辅助您的科研或工作。
+当您准备汇报您的Eilmer仿真时，我们希望您通够通过引用Eilmer的文章来致谢。
+具体的引用方式为：
+
+Jacobs P.A. and Gollan R.J. (2016)
+<cite>Implementation of a Compressible-Flow Simulation Code in the D Programming Language.</cite>
+Advances of Computational Mechanics in Australia; 846:54-60
+(DOI: 10.4028/www.scientific.net/AMM.846.54)
+
+Gollan R.J. and Jacobs P.A. (2013)
+<cite>About the formulation, verification and validation of the hypersonic flow solver Eilmer.</cite>
+International Journal for Numerical Methods in Fluids; 73:19-57
+(DOI: 10.1002/fld.3790)
+
+
+# 证书
+For the source code, we use the GNU General Public License 3. Please see the file <code>gpl.txt</code> in the source tree.
+
+For the documentation, such as this website, we use the Creative Commons Attribution-ShareAlike 4.0 International License.
+

@@ -1,35 +1,70 @@
 
+# What does Eilmer do
 
-> Yet another man.
-
-
-Hi, I am *@huxpro* (Huang, Xuan), a software engineer & a designer. I previously worked as Web Front-End Engineer at [Alibaba Trip](https://www.alitrip.com/); Web Front-End Infrastructure Team Lead at [Wepiao.com](https://www.crunchbase.com/organization/wepiao#/entity); And [Invited Consultant on PWA]((https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509)) at [Ele.me](https://github.com/elemefe/).
-
-I studied Digital Media Art and graduated from [Communication University of China](https://en.wikipedia.org/wiki/Communication_University_of_China) by 2016, and am studying Computer Science at [Rochester Institute of Technology](https://en.wikipedia.org/wiki/Rochester_Institute_of_Technology) from 2017.
-
-
-##### Talks
-
-- [Upgrading to Progressive Web Apps][9] · [JSConf China Shanghai 2017](http://2017.jsconf.cn/)
-- Building Progressive Web Apps · [CSDI Guangzhou 2017](http://www.csdisummit.com/)
-- The State of Progressive Web App · GDG IO Redux Beijing 2017
-- PWA Rehashing · Baidu HQ Beijing 2017
-- [Service Worker 101][5] · GDG DevFest Beijing 2016
-- [Progressive Web Apps][4] · QCon Shanghai 2016
-- Progressive Web App in my POV · GDG IO Redux Beijing 2016
-- [CSS Still Sucks 2015][2] · 2015
-- [JavaScript Modularization Journey][1] · 2015
+The Eilmer code is a program for the numerical simulation of transient, compressible gas flows in two and three dimensions. This program answers the “What if … ?” type of question where you will set up a flow situation by defining the spatial domain in which the gas moves, set an initial gas state throughout this domain, specify boundary condition constraints to the edges of the domain and then let the gas flow evolve according to the rules of gas dynamics
 
 
 
-[1]: //huangxuan.me/2015/07/09/js-module-7day/
-[2]: //huangxuan.me/2015/12/28/css-sucks-2015/
-[3]: //huangxuan.me/2016/06/05/pwa-in-my-pov/
-[4]: //huangxuan.me/2016/10/20/pwa-qcon2016/
-[5]: //huangxuan.me/2016/11/20/sw-101-gdgdf/
-[6]: https://yanshuo.io/assets/player/?deck=58ac8598b123db0067292f92 "PWA Rehashing"
-[7]: https://yanshuo.io/assets/player/?deck=593ad6fbfe88c2006a0a0d6d "The State of PWA"
-[8]: https://yanshuo.io/assets/player/?deck=594d673d570c357d0698a950 "Building PWA"
-[9]: //huangxuan.me/jsconfcn2017/
+# Who built Eilmer, and why
+
+The principal developers of Eilmer are Peter Jacobs and Rowan Gollan, both at the University of Queensland. There have been many contributors to the project over the years. The complete list of contributors is available [here](http://cfcfd.mechmining.uq.edu.au/eilmer/contributors/).
+
+Eilmer began life as a tool to simulate and aid in the of design shock tunnels and expansion tubes. It has also been applied to the analysis of the experiments undertaken in shock tunnels and expansion tubes.
+
+More recently, Eilmer is being used in the simulation and design of hypersonic inlets, turbomachinery and microcombustors.
+
+
+# Features
+
+* 2D/3D compressible flow simulation
+* Gas models include ideal, thermally perfect, equilibrium, multi-temperature
+* Finite-rate chemistry
+* Inviscid, laminar, turbulent (k-omega) flows.
+* Solid domains with conjugate heat transfer in 2D.
+* User-controlled moving grid capability.
+* Shock-fitting method for 2D geometries.
+* Dense-gas thermodynamic models and rotating framse of reference for turbomachine modelling.
+* Transient, time-accurate, using explicit Euler, predictor-corrector and Runge-Kutta updates.
+* Steady-state solver using the Newton-Krylov approach.
+* Parallel computation using shared memory.
+* Multiple block, structure and unstructured grids.
+* Native grid generation and import capability.
+* Unstructured-mesh partitioning via Metis.
+
+# How can you contribute
+
+* By using the code and giving us feedback on your simulations and results.
+* By giving us feedback on the documentation.
+* By contributing source code. The complete repository is available on bitbucket: [https://bitbucket.org/cfcfd/dgd](https://bitbucket.org/cfcfd/dgd)
+
+# How to cite
+We hope that by using Eilmer you are able to produce some high quality simulations that aid your work. When it comes time to report the results of your Eilmer simulations to others, we ask that you acknowledge our work by citing our papers on the Eilmer code:
+
+Jacobs P.A. and Gollan R.J. (2016)
+<cite>Implementation of a Compressible-Flow Simulation Code in the D Programming Language.</cite>
+Advances of Computational Mechanics in Australia; 846:54-60
+(DOI: 10.4028/www.scientific.net/AMM.846.54)
+
+
+
+Gollan R.J. and Jacobs P.A. (2013)
+<cite>About the formulation, verification and validation of the hypersonic flow solver Eilmer.</cite>
+International Journal for Numerical Methods in Fluids; 73:19-57
+(DOI: 10.1002/fld.3790)
+
+
+
+
+# License
+
+For the source code, we use the GNU General Public License 3. Please see the file <code>gpl.txt</code> in the source tree.
+
+For the documentation, such as this website, we use the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+
+
+
+
+
 
 
