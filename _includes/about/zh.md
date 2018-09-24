@@ -21,13 +21,13 @@ Eilmer 是从辅助涉及激波风洞和扩压管开始做为一个仿真工具�
 * 包括理想气体、热力学完美气体、相平衡、多温在内的多种热力学模型
 * 有限速率化学反应
 * 无黏流、层流、湍流 (k-omega)流动
-* 二维的Solid domains with conjugate heat transfer in 2D.
-* User-controlled moving grid capability.
-* Shock-fitting method for 2D geometries.
-* Dense-gas thermodynamic models and rotating framse of reference for turbomachine modelling.
-* Transient, time-accurate, using explicit Euler, predictor-corrector and Runge-Kutta updates.
-* Steady-state solver using the Newton-Krylov approach.
-* Parallel computation using shared memory.
+* 二维的固体控制域及耦合换热
+* 可由用户控制的移动网格
+* 二维结构激波自适应方法
+* 适用于转动机械的质密气体热力学模型及旋转参考系方法
+* 瞬态、时间准确，使用显示欧拉方法，Transient, time-accurate, using explicit Euler, predictor-corrector and Runge-Kutta updates.
+* 使用Newton-Krylov方法的稳态求解器
+* 使用共享内存的并行计算
 * Multiple block, structure and unstructured grids.
 * Native grid generation and import capability.
 * Unstructured-mesh partitioning via Metis.
@@ -57,4 +57,6 @@ International Journal for Numerical Methods in Fluids; 73:19-57
 For the source code, we use the GNU General Public License 3. Please see the file <code>gpl.txt</code> in the source tree.
 
 For the documentation, such as this website, we use the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+
 

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="这里是Eilmer中文网">
+    <meta name="keywords"  content="">
+    <meta name="theme-color" content="#000000">
+    
+    <title>About - Eilmer 中文网</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/about/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Eilmer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/about-bg-walle.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>About</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Hey, this is Hux.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+<!-- NO SIDEBAR -->
+    <!-- PostList Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
+                <!-- Language Selector -->
+<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+    
+    <h1 id="eilmer-可以用来">Eilmer 可以用来…</h1>
+
+<p>Eilmer 是用来对二维或三维瞬态可压缩流动进行数值仿真的代码库。
+您可以通过给定计算域、初始流动状态、边界条件</p>
+
+<h1 id="谁打造了eilmer-为什么呢">谁打造了Eilmer？ 为什么呢？</h1>
+<p>最主要的开发者是来自于澳大利亚昆士兰大学的 Dr. Peter Jacobs 和 Dr. Rowan Gollan.
+近年来亦有很多开发者做出了出色的贡献。
+完整的贡献者名单请<a href="http://cfcfd.mechmining.uq.edu.au/eilmer/contributors/">点击</a>.</p>
+
+<p>Eilmer 是从辅助涉及激波风洞和扩压管开始做为一个仿真工具来使用的。
+同时Eilmer也用来仿真在激波风洞和扩压管中的实验项目。</p>
+
+<p>最近，Eilmer拓展到了高超声速、涡轮机械及微尺度燃烧器的设计及仿真领域。</p>
+
+<h1 id="eilmer的特别之处">Eilmer的特别之处</h1>
+<ul>
+  <li>二维/三维可压缩流动仿真</li>
+  <li>包括理想气体、热力学完美气体、相平衡、多温在内的多种热力学模型</li>
+  <li>有限速率化学反应</li>
+  <li>无黏流、层流、湍流 (k-omega)流动</li>
+  <li>二维的固体控制域及耦合换热</li>
+  <li>可由用户控制的移动网格</li>
+  <li>二维结构激波自适应方法</li>
+  <li>适用于转动机械的质密气体热力学模型及旋转参考系方法</li>
+  <li>瞬态、时间准确，使用显示欧拉方法，Transient, time-accurate, using explicit Euler, predictor-corrector and Runge-Kutta updates.</li>
+  <li>使用Newton-Krylov方法的稳态求解器</li>
+  <li>使用共享内存的并行计算</li>
+  <li>Multiple block, structure and unstructured grids.</li>
+  <li>Native grid generation and import capability.</li>
+  <li>Unstructured-mesh partitioning via Metis.</li>
+</ul>
+
+<h1 id="如何做贡献">如何做贡献？</h1>
+
+<h1 id="如何引用eilmer">如何引用Eilmer？</h1>
+
+<p>我们希望通过使用Eilmer，您可以通过创造一些高品质的仿真工作，来辅助您的科研或工作。
+当您准备汇报您的Eilmer仿真时，我们希望您通够通过引用Eilmer的文章来致谢。
+具体的引用方式为：</p>
+
+<p>Jacobs P.A. and Gollan R.J. (2016)
+<cite>Implementation of a Compressible-Flow Simulation Code in the D Programming Language.</cite>
+Advances of Computational Mechanics in Australia; 846:54-60
+(DOI: 10.4028/www.scientific.net/AMM.846.54)</p>
+
+<p>Gollan R.J. and Jacobs P.A. (2013)
+<cite>About the formulation, verification and validation of the hypersonic flow solver Eilmer.</cite>
+International Journal for Numerical Methods in Fluids; 73:19-57
+(DOI: 10.1002/fld.3790)</p>
+
+<h1 id="证书">证书</h1>
+<p>For the source code, we use the GNU General Public License 3. Please see the file <code>gpl.txt</code> in the source tree.</p>
+
+<p>For the documentation, such as this website, we use the Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+
+
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    
+    
+<h1 id="what-does-eilmer-do">What does Eilmer do</h1>
+
+<p>The Eilmer code is a program for the numerical simulation of transient, compressible gas flows in two and three dimensions. This program answers the “What if … ?” type of question where you will set up a flow situation by defining the spatial domain in which the gas moves, set an initial gas state throughout this domain, specify boundary condition constraints to the edges of the domain and then let the gas flow evolve according to the rules of gas dynamics</p>
+
+<h1 id="who-built-eilmer-and-why">Who built Eilmer, and why</h1>
+
+<p>The principal developers of Eilmer are Peter Jacobs and Rowan Gollan, both at the University of Queensland. There have been many contributors to the project over the years. The complete list of contributors is available <a href="http://cfcfd.mechmining.uq.edu.au/eilmer/contributors/">here</a>.</p>
+
+<p>Eilmer began life as a tool to simulate and aid in the of design shock tunnels and expansion tubes. It has also been applied to the analysis of the experiments undertaken in shock tunnels and expansion tubes.</p>
+
+<p>More recently, Eilmer is being used in the simulation and design of hypersonic inlets, turbomachinery and microcombustors.</p>
+
+<h1 id="features">Features</h1>
+
+<ul>
+  <li>2D/3D compressible flow simulation</li>
+  <li>Gas models include ideal, thermally perfect, equilibrium, multi-temperature</li>
+  <li>Finite-rate chemistry</li>
+  <li>Inviscid, laminar, turbulent (k-omega) flows.</li>
+  <li>Solid domains with conjugate heat transfer in 2D.</li>
+  <li>User-controlled moving grid capability.</li>
+  <li>Shock-fitting method for 2D geometries.</li>
+  <li>Dense-gas thermodynamic models and rotating framse of reference for turbomachine modelling.</li>
+  <li>Transient, time-accurate, using explicit Euler, predictor-corrector and Runge-Kutta updates.</li>
+  <li>Steady-state solver using the Newton-Krylov approach.</li>
+  <li>Parallel computation using shared memory.</li>
+  <li>Multiple block, structure and unstructured grids.</li>
+  <li>Native grid generation and import capability.</li>
+  <li>Unstructured-mesh partitioning via Metis.</li>
+</ul>
+
+<h1 id="how-can-you-contribute">How can you contribute</h1>
+
+<ul>
+  <li>By using the code and giving us feedback on your simulations and results.</li>
+  <li>By giving us feedback on the documentation.</li>
+  <li>By contributing source code. The complete repository is available on bitbucket: <a href="https://bitbucket.org/cfcfd/dgd">https://bitbucket.org/cfcfd/dgd</a></li>
+</ul>
+
+<h1 id="how-to-cite">How to cite</h1>
+<p>We hope that by using Eilmer you are able to produce some high quality simulations that aid your work. When it comes time to report the results of your Eilmer simulations to others, we ask that you acknowledge our work by citing our papers on the Eilmer code:</p>
+
+<p>Jacobs P.A. and Gollan R.J. (2016)
+<cite>Implementation of a Compressible-Flow Simulation Code in the D Programming Language.</cite>
+Advances of Computational Mechanics in Australia; 846:54-60
+(DOI: 10.4028/www.scientific.net/AMM.846.54)</p>
+
+<p>Gollan R.J. and Jacobs P.A. (2013)
+<cite>About the formulation, verification and validation of the hypersonic flow solver Eilmer.</cite>
+International Journal for Numerical Methods in Fluids; 73:19-57
+(DOI: 10.1002/fld.3790)</p>
+
+<h1 id="license">License</h1>
+
+<p>For the source code, we use the GNU General Public License 3. Please see the file <code>gpl.txt</code> in the source tree.</p>
+
+<p>For the documentation, such as this website, we use the Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+
+
+</div>
+
+
+
+
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        
+	</div>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    
+
+
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Eilmer 2018
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    // Changes at v1.7.2: change the language flag from hash-basing to in-memory basing
+    // due to its confliction with catalog anchors.
+    // window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(_hash){
+        var _hash = _hash || window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $en.classList.add("active");
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $zh.classList.add("active");
+            $en.style.display = "none";
+            $en.classList.remove("active");
+        }
+        // interop with catalog 
+        if ("") generateCatalog(".catalog-body");
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            _hash = "#zh"
+        }else{
+            _hash = "#en"
+        }
+        _render(_hash)
+    }
+
+    // init
+    _render();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
