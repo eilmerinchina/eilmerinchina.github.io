@@ -18,7 +18,7 @@ Eilmer 是从辅助涉及激波风洞和扩压管开始做为一个仿真工具�
 
 Eilmer的[英文网站](https://gdtk.uqcloud.net/docs/eilmer/about/)上可以查看更多有用的信息。
 
-为方便用户使用，我们隆重推出了Eilmer用户指南的中文版
+为方便用户使用，我们隆重推出了[Eilmer用户指南](中文版Eilmer_2021_10_12_更新.pdf)的中文版
 
 # Eilmer的特别之处
 * 二维/三维可压缩流动仿真
