@@ -54,7 +54,7 @@ defaults:
     values:
       layout: "post"
       author: "Janry" # 你的名字
-      header-img: "img/BNE_city_1.jpg" # We don't want posts without a header image, that whould mean white on white
+      header-img: "img/post-bg-universe.jpg" # We don't want posts without a header image, that whould mean white on white
 
 
 # Disqus settings
